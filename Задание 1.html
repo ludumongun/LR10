@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+          function draw(){
+              var canvas = document.getElementById('canvas');
+              var ctx = canvas.getContext('2d');
+              var r = 200;
+              var x = 200;
+              while(r>0){
+              var colorR = Math.floor(255*Math.random());
+              var colorG = Math.floor(255*Math.random());
+              var colorB = Math.floor(255*Math.random());
+            ctx.beginPath();
+            ctx.moveTo(400,200);
+            ctx.arc(x,200,r,0,Math.PI*2,true);
+            ctx.fillStyle = 'rgb('+colorR+','+colorG+','+colorB+')';
+            ctx.fill();
+            r=r-5;
+            x=x+5;
+            }
+          }
+   
+        </script>
+    </head> 
+    <body onload = "draw()">
+        <canvas id="canvas" width="400" height="400"></canvas>
+    </body>
+</html> 

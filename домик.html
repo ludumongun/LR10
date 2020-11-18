@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<script> 
+			function draw() {
+				var canvas = document.getElementById('canvas');
+				var ctx = canvas.getContext('2d');
+				ctx.fillStyle = '#66FFFF';
+				ctx.fillRect(0,0,250,200);
+				ctx.fillStyle = 'yellow';
+				ctx.strokeRect(0,0,250,200);
+				ctx.fillRect(75,75,100,100);
+				
+				ctx.fillStyle = 'blue';
+				ctx.fillRect(110,110,30,30);
+				
+				ctx.beginPath();
+				ctx.moveTo(125,0);
+				ctx.lineTo(75,75);
+				ctx.lineTo(175,75);
+				ctx.fillStyle = 'red';
+				ctx.fill();
+				
+				ctx.beginPath();
+				ctx.lineTo(200,150);
+				ctx.lineTo(50,150);
+				ctx.lineTo(50,125);
+				ctx.lineTo(50,175);
+				ctx.moveTo(200,125);
+				ctx.lineTo(200,125);
+				ctx.lineTo(200,175);
+				ctx.moveTo(165,125);
+				ctx.lineTo(165,125);
+				ctx.lineTo(165,175);
+				ctx.moveTo(85,125);
+				ctx.lineTo(85,125);
+				ctx.lineTo(85,175);
+				ctx.fillStyle = 'brown';
+				ctx.lineWidth = 5;
+				ctx.stroke();
+				
+				ctx.fillStyle = 'green';
+				ctx.fillRect(0,175,250,25);
+				
+				ctx.beginPath();
+				ctx.moveTo(50,50);
+				ctx.arc(35,50,15,0,Math.PI*2,true);
+				ctx.fillStyle='yellow';
+				ctx.lineWidth=5;
+				ctx.fill();
+			}
+		</script>
+	</head>
+	
+	<body onload="draw()">
+		<canvas id="canvas" width="250" height="200" bgcolor="#c0c0c0">
+		</canvas>
+	</body>
+</html>
